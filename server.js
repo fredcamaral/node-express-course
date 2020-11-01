@@ -20,3 +20,12 @@ server.get('/users', function (req, res) {
         users: mockUserData
     })
 })
+
+server.get('/users/:id',function(req,res){
+	console.log(req.params.id)
+	res.json({
+		success: true,
+		message: 'got one user',
+		user: req.params.id
+	})
+})
